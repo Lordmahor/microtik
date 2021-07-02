@@ -287,7 +287,7 @@ firebase.initializeApp({
 });
 firebase.auth().onAuthStateChanged(() => {
     if(!app) {
-        app = createApp(App)
+        app = Vue.createApp(App)
         app.config.globalProperties.$filters = {dateFilter(value, format = 'date') {
             const options = {}
             if (format.includes('date')){
